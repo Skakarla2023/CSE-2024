@@ -21,6 +21,19 @@
 #### size:
 - finds the number of elements in the stack.
 
+| Operation    | Definition                         |
+|--------------|------------------------------------|
+|push()        |Adds an element to the stack        |
+|pop()         |Removes element from stack          |
+|peek()        |returns the top element of the stack|
+|isEmpty()     |checks if the stack is empty        |
+|size()        |counts the no.of elements in stack  |
+
+
+
+
+
+
 The following python code shows operations that can be done on stacks.
 
 ``` Python
