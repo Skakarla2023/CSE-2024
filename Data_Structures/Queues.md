@@ -4,6 +4,13 @@
 -  It follow FIFO.
 -  Think of queue as people standing in line in a supermarket.
 
+
+![image](https://github.com/user-attachments/assets/e5f34df4-d8d2-4c60-894d-27dec8c4e7c5)
+
+
+
+
+
 Basic operations we can do on queue:
 #### Enqueue:
 - adds a new element to the queue.
