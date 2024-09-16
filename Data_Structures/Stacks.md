@@ -2,6 +2,13 @@
 
 -  Stack is a Data Structure that can hold many elements.
 -  It follows LIFO.
+
+
+![image](https://github.com/user-attachments/assets/af74648a-2fb7-46c0-912e-8b3a389c4def)
+
+
+
+
 -  Basic Operations we do on stack are-
 #### Push:
 - Adds a new element to the stack.
