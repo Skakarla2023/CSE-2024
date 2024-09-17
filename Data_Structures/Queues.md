@@ -23,6 +23,10 @@ Basic operations we can do on queue:
 #### size:
 - find the number of elements in the queue.
 
+
+![image](https://github.com/user-attachments/assets/1808a909-f0ff-4521-9e29-eb78689ac382)
+
+
 The following python code shows operations on queues.
 
 ``` Python
