@@ -56,6 +56,16 @@ print("Size: ", len(queue))
 
 ```
 
+Output:
+```
+Queue:  ['A', 'B', 'C']
+Dequeue:  A
+Peek:  B
+isEmpty:  False
+Size:  2
+```
+
+
 ### Queues implementation using LinkedLists
 
 The following java code shows queues implementation using LinkedLists
