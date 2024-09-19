@@ -64,7 +64,46 @@ Peek:  B
 isEmpty:  False
 Size:  2
 ```
+### Queue implementation using Array(class):
 
+To explicitly create a data structure for queues, with basic operations, we should create a queue class instead.
+The following pyhton code shows the implementation of queues using arrays by creating them explicitly
+
+``` Python
+class Queue:
+    def __init__(self):
+        self.queue = []        
+    def enqueue(self,element):
+     self.queue.append(element)        
+    def dequeue(self):
+        if self.isEmpty():
+            return "Queue is empty"
+        return self.queue.pop(0)        
+    def peek(self):
+        if self.isEmpty():
+            return "queue is empty"
+        return self.queue[0]                
+    def isEmpty(self):
+        return len(self.queue)==0        
+    def size(self):
+        return len(self.queue)      
+myqueue=Queue();
+myqueue.enqueue('A')
+myqueue.enqueue('B')
+myqueue.enqueue('C')
+print("Queue: ",myqueue.queue)
+print("Dequeue: ",myqueue.dequeue())
+print("peek: ",myqueue.peek())
+print("isEmpty: ",myqueue.isEmpty())
+print("Size: ",myqueue.size())
+```
+```
+Queue:  ['A', 'B', 'C']
+Dequeue:  A
+peek:  B
+isEmpty:  False
+Size:  2
+```
 
 ### Queues implementation using LinkedLists
 
