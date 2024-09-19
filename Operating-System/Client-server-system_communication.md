@@ -1,6 +1,6 @@
 # Communication in Client-Server System
 
-In client server system refers to exchange of data and services among multiple machines or processes.
+Communication in client server system refers to exchange of data and services among multiple machines or processes.
 In client-server system, the process that requests for a servce acts as a client and the process that provides the data serves as the server. 
 In CSS, we can use different ways;
 * Sockets Mechanism.
