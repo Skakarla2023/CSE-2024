@@ -21,10 +21,18 @@ A client has a request that the RPC translates and sends to the server. This req
 ![image](https://github.com/user-attachments/assets/cbaba678-712e-4c48-9831-b43f30ed92d6)
 
 #### Pipes
-These are IPC that contains 2 ends. Data is entered at one end and is retrieved at the other end. There are 2 types of pipes, named and ordinary.
-Ordinary pipe allow only one way communication. Named pipes allow 2 way communication. 
+These are IPC that contains 2 ends. 
+
+Data is entered at one end and is retrieved at the other end. There are 2 types of pipes, named and ordinary.
+
+Ordinary pipe allow only one way communication.
+
+Named pipes allow 2 way communication. 
+
 Ordinary pipes have a parent child communication, that they can be accessed by the processes that created or inherited them.
-Named pipes are more powerful than ordinary pipes, they exist even after the process using them has been terminated.They need to be explicitly deleted when no longer required.
+
+Named pipes are more powerful than ordinary pipes, they exist even after the process using them has been terminated.
+They need to be explicitly deleted when no longer required.
 
 ![image](https://github.com/user-attachments/assets/9168e9da-8bde-4e41-9826-73bce92128fd)
 
