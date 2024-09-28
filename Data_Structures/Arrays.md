@@ -122,3 +122,7 @@ for i in range(1,len(arr)):
        
 print(arr)
 ```
+Output:
+```
+[12, 23, 43, 45, 68, 93]
+```
