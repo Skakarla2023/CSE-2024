@@ -102,9 +102,23 @@ Output:
 Sorted Array: 
 11 
 22 
-24 
+24  
 34 
 49 
 56 
 64
+```
+#### Insertion sort
+As the name sugests,in this type of sorting technique, we select the element and insert in the correct position based on its value,each value would be shifted to its next position or index each time a new index is added.
+
+``` Python
+arr=[12,45,23,68,43,93]
+for i in range(1,len(arr)):
+    ind=i
+    for h in range(i-1,-1,-1):
+        if arr[ind]<arr[h]:
+            arr[ind],arr[h]=arr[h],arr[ind]
+            ind=h
+       
+print(arr)
 ```
