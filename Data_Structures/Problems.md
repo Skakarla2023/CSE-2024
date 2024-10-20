@@ -43,13 +43,41 @@ Maximum subarraysum: 9
 
 Source code(By kadane's Algorithm)-
 
-``` C++
+Kadane's algorithm works on the principle that, if there are any negative numbers in the array, then there might be chance that sometimes the sum might change to zero and sometimes even less than zero. i.e., if there is a lesser positive number and bigger negative number the result goes to negative, and in the same way if there is smaller negative number and bigger positive number the result remains positive. So instead of adding such negative numbers, it is better to add '0' to the currentr sum value, so everytime the currentsum tends to a value less than zero, we'll initialize the current sum to 0, again calculating the current sum value.
 
+Updating of currentsum to zero is always done at the end, bcz some arrays contain elements that are negative i.e., all elements are negtaive, then the result has to be negative, not zero(such cases are called edge cases or corner cases).--
+		
+Source code:
+
+``` C++
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int main()
+{
+	int n=5;
+	int arr[5]={-2,4,-1,5,7};
+	int maxsum=INT_MIN;
+	int currentsum=0;
+	for(int i=0;i<n;i++)
+	{
+		currentsum+=arr[i];
+		maxsum=max(currentsum,maxsum);
+		if(currentsum<0)
+		{
+			currentsum=0;
+		}
+	}
+	cout<<"Result found by Kadane's Algorithm:"<<endl;
+	cout<<"Maximum subarray sum: "<<maxsum;
+}
 ```
 
 Output:
 ```
-
+Result found by Kadane's Algorithm:
+Maximum subarray sum: 15
 ```
 ### Single Number
 
