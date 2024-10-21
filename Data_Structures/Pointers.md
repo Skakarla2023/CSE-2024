@@ -118,7 +118,7 @@ Output:
 Source code-
 
 ``` CPP
-#include<iostream>
+#include<iostream> // pass by reference using alias
 #include<vector>
 using namespace std;
 
@@ -139,3 +139,114 @@ int main()
 Output:
 
 ![image](https://github.com/user-attachments/assets/34828192-a0ee-4158-9f43-bbc89ab2eb0f)
+
+### Array Pointers
+
+The name of the array always points to the first element of the array.If we try to print the value of array it returns the address of first element of the array.
+
+The name of the array is so called a "Constant pointer".
+
+Example code-
+
+```CPP
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int main()
+{
+	int arr[]={1,2,3,4,5};
+	cout<<arr<<endl;
+	cout<<*arr<<endl;
+	cout<<&(arr[0])<<endl;
+	return 0;
+}
+```
+
+
+Output:
+
+![image](https://github.com/user-attachments/assets/737187f0-6c88-4827-b108-11a2bb799c69)
+
+### Pointer Arithmetic
+
+* Increment(++)/Decrement(--)
+
+If we perform increment on normal variables, their value is increased by 1.But what if we perform the same operation on pointers, the size of the variable i.e., the memory size of the datatype is added each time we increment the pointer.
+
+Sample code-
+``` CPP
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int main()
+{
+	int a =4;
+	int*p =&a;
+	
+	cout<<"Before Increment-"<<p<<endl;
+	p++;
+	cout<<"After Increment-"<<p<<endl;
+	
+	cout<<"Before Decrement-"<<p<<endl;
+	p--;
+	cout<<"After Decrement-"<<p<<endl;
+	
+	return 0;
+}
+```
+Output:
+
+![image](https://github.com/user-attachments/assets/2cb70893-0bc2-480e-af47-68e58ef45541)
+
+
+
+* Add/Subtract Number
+
+When we add any number to a pointer, the same thing happens when we increment/decrement the pointer, the size of integer or the datatype is added that many times based on the value that we add to the variable.
+
+
+Sample code-
+
+``` CPP
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int main()
+{
+	int a =4;
+	int*p =&a;
+	
+	cout<<"Before Addition-"<<p<<endl;
+	p=p+5;
+	cout<<"After Addition-"<<p<<endl;
+	
+	cout<<"Before Subtraction-"<<p<<endl;
+	p=p-2;
+	cout<<"After Subtraction-"<<p<<endl;
+	
+	return 0;
+}
+```
+
+Output:
+
+![image](https://github.com/user-attachments/assets/657db2ec-192c-41c4-9c0e-3ccaf6c72116)
+
+```CPP
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int main()
+{
+	int arr[]={10,20,30,40};
+	int* ptr=arr;
+	cout<<*(ptr+1)<<endl;
+	cout<<*(ptr+2)<<endl;
+	ptr++;
+	cout<<*ptr<<endl;
+}
+```
