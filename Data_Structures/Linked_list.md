@@ -99,19 +99,94 @@ int main()
 }
 ```
 
-Types of Linked Lists
+#### Types of Linked Lists
 There are three basic forms of linked lists:
 
 Singly linked lists
 Doubly linked lists
 Circular linked lists
 
+### Single Linked List
 A singly linked list is the simplest kind of linked lists. It takes up less space in memory because each node has only one address to the next node, like in the image below.
 
 A singly linked list.
 A doubly linked list has nodes with addresses to both the previous and the next node, like in the image below, and therefore takes up more memory. But doubly linked lists are good if you want to be able to move both up and down in the list.
 
 ![image](https://github.com/user-attachments/assets/401d9322-f8e4-4998-b319-e86e787b8269)
+
+#### Operations on Single Linked List
+
+We can perform the following operations on a SLL.
+
+They are-
+
+##### Traversing/Traversal
+
+Traversing refers to travelling through each and every node of the Linked List.\
+
+here's a C code describing Traversing through and printing all elements of a Singly Linked List.
+
+Source Code:
+
+``` C
+#include <stdio.h>			// C code for traversal through a linkedlist
+#include <stdlib.h>
+
+typedef struct Node 		//creating a node structure
+{
+    int data;
+    struct Node* next;
+} Node;
+
+void traverseAndPrint(Node* head)//function to traverse through the LL and print the elements
+{
+    Node* currentNode = head;	//we'll first point the current node to head.
+    while (currentNode) 		//a while loop to check whether the node does not point to NULL
+    {
+        printf("%d -> ", currentNode->data);// if the pointer does not point to NULL,it prints the data that the next is pointing to
+        currentNode = currentNode->next;	//make the next node as currentnode
+    }
+    printf("null\n");			//printing NULL statement for the last node,whose pointer points to NULL
+}
+
+int main()
+{
+    Node* node1 = (Node*)malloc(sizeof(Node));//dynamically allocating memory for all the newnodes
+    Node* node2 = (Node*)malloc(sizeof(Node));
+    Node* node3 = (Node*)malloc(sizeof(Node));
+    Node* node4 = (Node*)malloc(sizeof(Node));
+    Node* node5 = (Node*)malloc(sizeof(Node));
+
+    node1->data = 7;			//assiging data values to the node
+    node2->data = 11;
+    node3->data = 3;
+    node4->data = 2;
+    node5->data = 9;
+
+    node1->next = node2;		//pointing next pointer of each node to it's next node
+    node2->next = node3;
+    node3->next = node4;
+    node4->next = node5;
+    node5->next = NULL;
+
+    traverseAndPrint(node1);	//function call to traverse through and print the linked list
+
+    // Free the allocated memory
+    free(node1);
+    free(node2);
+    free(node3);
+    free(node4);
+    free(node5);
+    return 0;
+}
+```
+
+output:
+
+![image](https://github.com/user-attachments/assets/119db57a-a2b0-49a4-a568-f4cc9a20cfed)
+
+#### Insertion
+
 
 
 A doubly linked list.
