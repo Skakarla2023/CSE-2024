@@ -1,7 +1,8 @@
 # Stacks
 
 -  Stack is a Data Structure that can hold many elements.
--  It follows LIFO.
+- Stack is a linear data structure that follows a particular order in which operations are performed.
+- Stacks follow LIFO-“Last in First Out”, i.e., the element that is inserted at last will be removed first.
 
 
 ![image](https://github.com/user-attachments/assets/af74648a-2fb7-46c0-912e-8b3a389c4def)
@@ -9,17 +10,7 @@
 
 
 
--  Basic Operations we do on stack are-
-#### Push:
-- Adds a new element to the stack.
-#### Pop:
-- Removes an element from the stack.
-#### Peek:
-- returns the top element of the stack.
-#### isEmpty:
-- returns true if the stack is empty and false if not
-#### size:
-- finds the number of elements in the stack.
+  Basic Operations we do on stack are-
 
 | Operation    | Definition                         |
 |--------------|------------------------------------|
@@ -28,9 +19,6 @@
 |peek()        |returns the top element of the stack|
 |isEmpty()     |checks if the stack is empty        |
 |size()        |counts the no.of elements in stack  |
-
-
-
 
 
 
@@ -59,77 +47,124 @@ print("Size: ",len(stack))
 
 Stack implementation is often done using LinkedLists,
 due to their dynamic size,extra memory and readability.
-The following Java code shows implementation of stack using LinkedList
 
-```Java
+- The following C code shows basic operations that can be done on stack:
 
-public class Main {
-    public static void main(String[] args) {
-        Stack myStack = new Stack();
-        
-        myStack.push('A');
-        myStack.push('B');
-        myStack.push('C');
+``` C
+#include<stdio.h>
+#include<stdlib.h>
+#define SIZE 5
 
-        System.out.println("Pop: " + myStack.pop());
-        System.out.println("Peek: " + myStack.peek());
-        System.out.println("isEmpty: " + myStack.isEmpty());
-        System.out.println("Size: " + myStack.size());
-    }
+int top=-1,arr[SIZE];
+void push();
+void pop();
+void show();
+int isEmpty();
+int isFull();
+
+int main()
+{
+	int choice;
+	
+	while(1)
+	{
+		printf("****Operations on Stack*****\n");
+		printf("\n1.Push element\n2.Pop element\n3.Show\n4.isEmpty\n5.isFull\n6.Exit\n");
+		printf("Enter the choice:\n");
+		scanf("%d",&choice);
+		switch(choice)
+		{
+			case 1:
+				push();
+				break;
+			case 2:
+				pop();
+				break;
+			case 3:
+				show();
+				break;
+			case 4:
+				isEmpty();
+				break;
+			case 5:
+				isFull();
+				break;
+			case 6:
+				exit(0);
+			default:
+				printf("\nInvalid choice\n");
+		}
+	}
 }
 
-class Node {
-    char value;
-    Node next;
-    Node(char value) {
-        this.value = value;
-        this.next = null;
-    }
+void push()
+{
+	int x;
+	if(top==SIZE-1)
+	{
+		printf("Stack Overflow");
+	}
+	else
+	{
+		printf("Enter the element");
+		scanf("%d",&x);
+		top=top+1;
+		top=arr[x];
+	}
 }
 
-class Stack {
-    private Node head;
-    private int size;
-
-    public Stack() {
-        this.head = null;
-        this.size = 0;
-    }
-
-    public void push(char value) {
-        Node newNode = new Node(value);
-        if (head != null) {
-            newNode.next = head;
-        }
-        head = newNode;
-        size++;
-    }
-
-    public char pop() {
-        if (isEmpty()) {
-            return ' ';
-        }
-        char popped = head.value;
-        head = head.next;
-        size--;
-        return popped;
-    }
-
-    public char peek() {
-        if (isEmpty()) {
-            return ' ';
-        }
-        return head.value;
-    }
-
-    public boolean isEmpty() {
-        return size == 0;
-    }
-
-    public int size() {
-        return size;
-    }
+void pop()
+{
+	if(top==-1)
+	{
+		printf("Stack underflow");
+	}
+	else
+	{
+		printf("popped element: ",arr[top]);
+		top=top-1;
+	}
 }
 
+void show()
+{
+	int i;
+	if(top==-1)
+	{
+		printf("Stack underflow");
+	}
+	else
+	{
+		printf("\nElements inside the stack:");
+		for(i=0;i<top;i++)
+		{
+			printf("%d\n",arr[i]);
+		}
+	}
+}
 
+int isEmpty()
+{
+	if(top==-1)
+	{
+		printf("true\n");
+	}
+	else
+	{
+		printf("False\n");
+	}
+}
+
+int isFull()
+{
+	if(top==-1)
+	{
+		printf("false\n");
+	}
+	else
+	{
+		printf("true\n");
+	}
+}
 ```
+
