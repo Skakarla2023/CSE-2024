@@ -67,8 +67,6 @@ Now look at this simple HTML code:-
 ##### Tag reference
 
 ```
----------------------
-|Tag    |	Description|
 <!--...-->	Defines a comment
 <!DOCTYPE> 	Defines the document type
 <a>	Defines a hyperlink
