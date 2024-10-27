@@ -7,21 +7,15 @@
 
 ![image](https://github.com/user-attachments/assets/e5f34df4-d8d2-4c60-894d-27dec8c4e7c5)
 
-
-
-
-
 Basic operations we can do on queue:
-#### Enqueue:
-- adds a new element to the queue.
-#### Dequeue:
--  removes and returns the first element from the queue.
-#### Peek:
--  returns the first element in the queue.
-#### isEmpty:
--  checks if the queue is empty.
-#### size:
-- find the number of elements in the queue.
+
+|Operations      | Meaning                                 |
+|----------------|-----------------------------------------|
+|Enqueue         |adds a new element to the queue.         |
+|dequeue         |removes an element from the queue.       |
+|peek            |returns the first element in the queue.  |
+|isEmpty         |checks if the queue is empty             |
+|size            |find the number of elements in the queue.|
 
 
 ![image](https://github.com/user-attachments/assets/1808a909-f0ff-4521-9e29-eb78689ac382)
@@ -64,142 +58,8 @@ Peek:  B
 isEmpty:  False
 Size:  2
 ```
-### Queue implementation using Array(class):
+The following C code shows operations on queue:
 
-To explicitly create a data structure for queues, with basic operations, we should create a queue class instead.
-The following pyhton code shows the implementation of queues using arrays by creating them explicitly
-
-``` Python
-class Queue:
-    def __init__(self):
-        self.queue = []        
-    def enqueue(self,element):
-     self.queue.append(element)        
-    def dequeue(self):
-        if self.isEmpty():
-            return "Queue is empty"
-        return self.queue.pop(0)        
-    def peek(self):
-        if self.isEmpty():
-            return "queue is empty"
-        return self.queue[0]                
-    def isEmpty(self):
-        return len(self.queue)==0        
-    def size(self):
-        return len(self.queue)      
-myqueue=Queue();
-myqueue.enqueue('A')
-myqueue.enqueue('B')
-myqueue.enqueue('C')
-print("Queue: ",myqueue.queue)
-print("Dequeue: ",myqueue.dequeue())
-print("peek: ",myqueue.peek())
-print("isEmpty: ",myqueue.isEmpty())
-print("Size: ",myqueue.size())
-```
-```
-Queue:  ['A', 'B', 'C']
-Dequeue:  A
-peek:  B
-isEmpty:  False
-Size:  2
-```
-
-### Queues implementation using LinkedLists
-
-The following java code shows queues implementation using LinkedLists
-
-``` Java
-
-public class Main {
-    public static void main(String[] args) {
-        Queue myQueue = new Queue();
-        
-        myQueue.enqueue('A');
-        myQueue.enqueue('B');
-        myQueue.enqueue('C');
-        System.out.print("Queue: ");
-        myQueue.printQueue();
-        
-        System.out.println("Dequeue: " + myQueue.dequeue());
-        System.out.println("Peek: " + myQueue.peek());
-        System.out.println("isEmpty: " + myQueue.isEmpty());
-        System.out.println("Size: " + myQueue.size());
-    }
-}
-
-class Node {
-    char data;
-    Node next;
-    
-    public Node(char data) {
-        this.data = data;
-        this.next = null;
-    }
-}
-
-class Queue {
-    Node front;
-    Node rear;
-    int length;
-    
-    public Queue() {
-        this.front = null;
-        this.rear = null;
-        this.length = 0;
-    }
-    
-    public void enqueue(char element) {
-        Node newNode = new Node(element);
-        if (this.rear == null) {
-            this.front = this.rear = newNode;
-            length++;
-            return;
-        }
-        this.rear.next = newNode;
-        this.rear = newNode;
-        length++;
-    }
-    
-    public char dequeue() {
-        if (isEmpty()) {
-            System.out.println("Queue is empty");
-            return ' ';
-        }
-        Node temp = this.front;
-        this.front = temp.next;
-        if (this.front == null) {
-            this.rear = null;
-        }
-        length--;
-        return temp.data;
-    }
-    
-    public char peek() {
-        if (isEmpty()) {
-            System.out.println("Queue is empty");
-            return ' ';
-        }
-        return this.front.data;
-    }
-    
-    public boolean isEmpty() {
-        return length == 0;
-    }
-    
-    public int size() {
-        return length;
-    }
-    
-    public void printQueue() {
-        Node temp = this.front;
-        while (temp != null) {
-            System.out.print(temp.data + " ");
-            temp = temp.next;
-        }
-        System.out.println();
-    }
-}
+``` C
 
 ```
-
