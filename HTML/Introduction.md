@@ -202,3 +202,8 @@ Defines teletype text
 <video>	Defines embedded video content
 <wbr>	Defines a possible line-break
 ```
+
+- All HTML elements can have attributes.
+- Attributes provide additional information about elements.
+- Attributes are always specified in the start tag.
+- Attributes usually come in name/value pairs like: name="value".
