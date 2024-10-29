@@ -21,8 +21,8 @@ Node* createnode(int data)
 	
 	Node* newNode=(struct Node*)malloc(sizeof(struct Node));
 	newNode->data=data;
-	newNode->next=NULL:
-		
+	newNode->next=NULL;
+	return newNode;		
 }
 ```
 
