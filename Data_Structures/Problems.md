@@ -81,10 +81,33 @@ Maximum subarray sum: 15
 ```
 ### Single Number
 
-``` C++
+In this problem statement we'ew gonna find the single element, element which is unique and is not repeated,i.e., the element which occurs only once in the array,
+if we have both positive and negative numbers we can simply add them so that the numbers which are equal to each other but have opposite sign cancel each other. But how do we do this to an array which has all positive numbers.
 
+here's a simple solution to it-
+
+``` C++
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int main()
+{
+	int v[5]={1,3,3,5,1};
+	int n=5;
+	int sum=0;
+	for(int i=0;i<n;i++)
+	{
+		sum^=v[i];
+	}
+	cout<<"Single number:"<<sum;
+}
 ```
 
+Output:
+```
+Single number:5
+```
 ###
 
 ``` C++
