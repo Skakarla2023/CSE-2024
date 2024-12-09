@@ -59,4 +59,92 @@ In data structures collision occurs when two keys map to the same index in a has
 3.Seperate chaining
 ```
 
+binary search, Interpolation Search,
+Insertion Sort, Shell sort, Quick Sort, Merge Sort..
 
+##### Linear search-
+Linear search is a sequential searching algorithm in data structures in which we search each element sequentially starting from the beginning.
+It works sequentially by starting from the beginning of the list and go until the desired element is found or the list ends.
+
+The following C code shows the implementation of linear search in C
+```
+#include<stdio.h>
+int main()
+{
+	int arr[5]={12,36,47,50,79};
+	int i,k,flag;
+	printf("Enter key value:\n");
+	scanf("%d",&k);
+	int len=sizeof(arr)/sizeof(arr[0]);
+	for(i=0;i<len;i++)
+	{
+		if(k==arr[i])
+		{
+			flag==1;
+			break;
+		}
+	}
+	if(flag==1)
+	{
+		printf("Element is found\n");
+	}
+	else
+	{
+		printf("Element not found\n");
+	}
+	return 0;
+}
+```
+
+##### Binary search
+Binary search is a searching algorithm that works on sorted arrays or lists. It operates by dividing the arra into half and calculating the mid and finding the required element.
+
+The following C code shows the implementation of binary search in C-
+
+```
+#include<stdio.h>
+
+int main()
+{
+    int a[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};  
+    int mid, fi, li, key, n, i;
+    n = sizeof(a) / sizeof(a[0]);  
+    fi = 0, li = n - 1;
+    
+    printf("The array is: ");
+    for(i = 0; i < n; i++)
+    {
+        printf("%d ", a[i]);
+    }
+    printf("\nEnter the key you want to search: ");
+    scanf("%d", &key);
+    
+    while (fi <= li)
+    {  
+        mid = (fi + li) / 2;
+        
+        if (a[mid] == key)
+        {
+            printf("Element is found at index %d\n", mid);
+            return 0; 
+        }
+        else if (a[mid] < key)
+        {
+            fi = mid + 1;
+        }
+        else
+        {
+            li = mid - 1;
+        }
+    }    
+    printf("Element is not found\n"); 
+    return 0;
+}
+```
+
+##### Insertion sort
+Insertion sort is a comparision based sorting algorithm, it starts from second element considering first element as sorted and it inserts each element in such a way that each time the swapping happens it compares its previous element and next element to the current element.
+
+```
+
+```
