@@ -42,6 +42,12 @@ Insertion of element in hash table is based on the key.
 
 ![image](https://github.com/user-attachments/assets/9af6a500-202e-4ea4-bc4d-2fa8d6f8551f)
 
+- Types of hash methods
+  1. Modulo division method
+  2. Mid-square method
+  3. digit folding method
+  4. Multiplicative method
+
 There are several methods to map keys to indexes 
 #### Collision
 In data structures collision occurs when two keys map to the same index in a hash table.
@@ -52,3 +58,5 @@ In data structures collision occurs when two keys map to the same index in a has
 2.Quadratic Probing
 3.Seperate chaining
 ```
+
+
