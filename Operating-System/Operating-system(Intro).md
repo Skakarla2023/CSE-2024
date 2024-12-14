@@ -95,7 +95,7 @@ The operating system can be implemented with the help of various structures. The
 A system structure for an operating system is like the blueprint of how an OS is organized and how its different parts interact with each other.Because operating systems have complex structures, we want a structure that is easy to understand so that we can adapt an operating system to meet our specific needs. Similar to how we break down larger problems into smaller, more manageable subproblems, building an operating system in pieces is simpler.
 ### Types of Operating Systems Structures
 
-- Simple Structure:
+#### Simple Structure:
 
 Simple structure os do not have well defined structure, they are simple,small and limited.
 The interfaces and layers of functionalities in this structure are not well seperated.
@@ -104,22 +104,30 @@ MS-DOS OS is an example of Simple OS.
 
 ![image](https://github.com/user-attachments/assets/8dc956c7-c12e-481e-b36c-f0060679840f)
 
-- Micro-kernel Structure:
+#### Micro-kernel Structure:
 
 Micro-Kernel structure designs the operating system by removing all non-essential components from the kernel and implementing them as system and user programs. This results in a smaller kernel called the micro-kernel. Advantages of this structure are that all new services need to be added to user space and does not require the kernel to be modified. 
 Mac OS is an example of this type of OS.
 
-- layered Structure
+![image](https://github.com/user-attachments/assets/1e0e64ae-cb62-4c90-a6a3-60ca07dac5c4)
+
+#### layered Structure
 
 An OS can be broken into pieces and retain much more control over the system. In this structure, the OS is broken into a number of layers (levels). The bottom layer (layer 0) is the hardware, and the topmost layer (layer N) is the user interface. These layers are so designed that each layer uses the functions of the lower-level layers. This simplifies the debugging process, if lower-level layers are debugged and an error occurs during debugging, then the error must be on that layer only, as the lower-level layers have already been debugged.
 
 ![image](https://github.com/user-attachments/assets/0977a5c0-2c83-455b-8b30-0972c8f6bd4b)
 
-- Modular Structure
+#### Modular Structure
 
 It is considered as the best approach for an OS. It involves designing of a modular kernel. The kernel has only a set of core components and other services are added as dynamically loadable modules to the kernel either during runtime or boot time. It resembles layered structure due to the fact that each kernel has defined and protected interfaces, but it is more flexible than a layered structure as a module can call any other module. 
 
 ![image](https://github.com/user-attachments/assets/09302e27-dec5-4258-ba50-d98fc730d5f0)
+
+#### Hybrid-Kernel Structure
+
+Hybrid-Kernel structure is nothing but just a combination of both monolithic-kernel structure and micro-kernel structure. Basically, it combines properties of both monolithic and micro-kernel and make a more advance and helpful approach. It implement speed and design of monolithic and modularity and stability of micro-kernel structure.
+
+![image](https://github.com/user-attachments/assets/169ed20d-77d8-4d65-8caa-714bc58f83bb)
 
 
 ## System Calls
