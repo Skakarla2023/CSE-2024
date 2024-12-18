@@ -24,6 +24,7 @@ It is a blueprint for creating objects.
 
 To create a class use the keyword class.
 
+- 
 ``` Java
 class Main
 {
