@@ -1,3 +1,128 @@
+# Data Structures
+
+- Every real life system such as websites or web applications or software,all these run on data.
+- Data Structures are the structures that store and organise data.
+- These are not only used for storing the data, they also ensure effective operations on the data such as retrieval,modifications and deletion.
+- There are different types of data, that's why we need different types of data structures to store data.
+- Some examples of data structures are:
+```
+Arrays
+Linked lists
+stacks
+queues
+graphs
+trees
+```
+## Arrays
+- Arrays are the basic data structures that are used to store data in a linear manner.
+- Arrays store number of elements, with a single array_name.
+- Array elements are stored contiguously in memory.
+- Arrays have index that indicates position of any particular element in the array.
+- Arrays store same type of data in them.
+- Here's a C code showing different operations on an array:
+
+``` C
+#include<stdio.h>
+
+void swap(int smallest,int largest)
+{
+	int temp=smallest;
+	smallest=largest;
+	largest=temp;
+	printf("Smallest:%d\n",smallest);
+	printf("Largest:%d\n",largest);
+}
+
+int main()
+{
+	int arr[5]={12,23,34,45,56}; 
+	int n=sizeof(arr)/sizeof(arr[0]);
+	int i;
+	
+	// printing the elements in the array
+	printf("Elements in the array are:\n");
+	for(i=0;i<n;i++)
+	{
+		printf("%d\n",arr[i]);
+	}
+	
+	//printing ele in reverse order
+	printf("In reverse order:\n");
+	for(i=n-1;i>=0;i--)
+	{
+		printf("%d\n",arr[i]);
+	}
+	
+	//finding the smallest
+	int smallest=arr[0];
+	for(i=0;i<n;i++)
+	{
+		if(arr[i]<smallest)
+		{
+			smallest=arr[i];
+		}
+	}
+	printf("Smallest element in the array:%d\n",smallest);
+	
+	//finding the largest
+	int largest=arr[n-1];
+	for(i=0;i<n;i++)
+	{
+		if(arr[i]>largest)
+		{
+			largest=arr[i];
+		}
+	}
+	printf("Largest element in the array:%d\n",largest);
+	
+	//sum of array ele
+	int sum=0;for(i=0;i<n;i++)
+	{
+		sum+=arr[i];
+	}
+	printf("Sum of elements in array:%d\n",sum);
+	
+	//product of array ele
+	int pro=1;
+	for(i=0;i<n;i++)
+	{
+		pro*=arr[i];
+	}
+	printf("Product of elements in array:%d\n",pro);
+	
+	//swapping largest and smallest
+	swap(smallest,largest);
+	
+	return 0;
+}
+```
+
+Output:
+```
+Elements in the array are:
+12
+23
+34
+45
+56
+In reverse order:
+56
+45
+34
+23
+12
+Smallest element in the array:12
+Largest element in the array:56
+Sum of elements in array:170
+Product of elements in array:23647680
+Smallest:56
+Largest:12
+```
+
+
+
+
+
 #### Bubble sort
 
 - Bubble sort is an algorithm that sorts the array from lowest value to highest value.
