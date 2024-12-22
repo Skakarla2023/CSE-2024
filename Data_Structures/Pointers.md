@@ -1,7 +1,32 @@
 # Pointers
 
+- Pointers are special variables that store the address of other variables.
+- Pointers should be of the same datatype as the variable whose address it is going to store.
+- POinters are also declared with * .
+- 
+
 ### Memory Address
+
+- WHen we create a variable, or declare it in memory in memory of the computer that variable would be occupying some space and the exact location of that variable in the memory is nothing but the Memory address of the variable.
+- Memory address of a variable can be acquired using the (&) operator.
+
+``` C
+#include<iostream>
+using namespace std;
+int main()
+{
+	int a=10;
+	cout<<&a<<endl;
+	return 0;
+}
+```
+
+Output:
+```
+0x6ffe1c
+```
 ### Address of Operator
+
 ### Pointers
 
 A simple question on pointers-
