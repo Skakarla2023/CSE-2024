@@ -119,8 +119,62 @@ Smallest:56
 Largest:12
 ```
 
+## Operations on Arrays:
 
+1. searching
+2. sorting
+3. traversal
 
+The most used operations on arrays are searching and sorting, in which we search for any required key in the array or sort the elements in the array in ascending or descending order.
+
+### Searching
+
+#### Linear Search
+
+In Linear search,as the name suggests we search for a key in linear manner,i.e., we go through each element starting from the first index and check for the respective key,and if the key is found it'll return the message.
+
+The following C code demonstrates the use of Linear search:
+``` C
+#include<stdio.h>
+int main()
+{
+    int arr[7]={12,76,43,69,63,90,55};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    int key,i,flag;
+    
+    printf("Enter key to search:");
+    scanf("%d",&key);
+    
+    for(i=0;i<n;i++)
+    {
+        if(key==arr[i])
+        {
+            flag=1;
+            break;
+        }
+    }
+    
+    if(flag==1)
+    {
+        printf("Element is found");
+    }
+    else
+    {
+        printf("Element not found");
+    }
+}
+```
+
+Output:
+```
+Enter key to search:55
+Element is found
+
+Enter key to search:88
+Element not found
+```
+
+## Sorting
 
 
 #### Bubble sort
