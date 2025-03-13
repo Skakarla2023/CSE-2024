@@ -1,6 +1,6 @@
 # 100 Coding Questions in Java(Simple-->Difficult)
 
-## 1.Easy
+## 0.Easy
 
 1.A Simple Code to print Hello World.
 ```
@@ -283,6 +283,8 @@ Enter R:
 I=420
 ```
 
+## 1. Basic control
+
 11.Greatest of 3 no.s
 ```
 import java.util.*;
@@ -381,6 +383,158 @@ The given year is leap year.
 
 13.Grade
 ```
+import java.util.*;
+import java.lang.*;
+public class New1
+{
+	public static void main(String[] args)
+	{
+		Scanner obj=new Scanner(System.in);
+		System.out.println("Enter Maths marks:");
+		int math=obj.nextInt();
+		System.out.println("Enter Science marks:");
+		int s=obj.nextInt();
+		System.out.println("Enter English marks:");
+		int e=obj.nextInt();
+		System.out.println("Enter Social marks:");
+		int social=obj.nextInt();
+		System.out.println("Enter Physics marks:");
+		int phy=obj.nextInt();
+		int total=(math+s+e+social+phy)/5;
+		if(total>90)
+		{
+			System.out.println("Congratulations!!!You've secured 'A' Grade");
+		}
+		else if(total>80 && total<90)
+		{
+			System.out.println("You've secured 'B' Grade");
+		}
+		else
+		{
+			System.out.println("You've secured 'C' Grade");
+		}
+	}
+}
+
+```
+
+Output:
+```
+Enter Maths marks:
+99
+Enter Science marks:
+90
+Enter English marks:
+89
+Enter Social marks:
+87
+Enter Physics marks:
+88
+You've secured 'C' Grade
+```
+
+14.Sum of first n natural numbers
+```
+package g;
+import java.util.*;
+import java.lang.*;
+public class New1
+{
+	public static void main(String[] args)
+	{
+		Scanner obj=new Scanner(System.in);
+		System.out.println("Enter any number:");
+		int num=obj.nextInt();
+		int sum=0;
+		for(int i=0;i<=num;i++)
+		{
+			sum+=i;
+		}
+		System.out.println("Sum of numbers upto "+num+" is:"+sum);
+	}
+}
+```
+
+Output:
+```
+Enter any number:
+4
+Sum of numbers upto 4 is:10
+```
+
+15.factorial of a number
+```
+package g;
+import java.util.*;
+import java.lang.*;
+public class New1
+{
+	public static void main(String[] args)
+	{
+		Scanner obj=new Scanner(System.in);
+		System.out.println("Enter any number:");
+		int num=obj.nextInt();
+		int fact=1;
+		for(int i=1;i<=num;i++)
+		{
+			fact*=i;
+		}
+		System.out.println("Factorial of the number is:"+fact);
+	}
+}
+```
+
+Output:
+```
+Enter any number:
+6
+Factorial of the number is:720
+```
+
+16.Prime number
+```
+package g;
+import java.util.*;
+import java.lang.*;
+public class New1
+{
+	public static void main(String[] args)
+	{
+		Scanner obj=new Scanner(System.in);
+		System.out.println("Enter a number:");
+		int num=obj.nextInt();
+		if(num<=1)
+		{
+			System.out.println("Neither prime nor composite.");
+		}
+		else
+		{
+			for(int i=2;i<Math.sqrt(num);i++)
+			{
+				if(num%i==0)
+				{
+					System.out.println("The entered number is a composite number.");
+				}
+				else
+				{
+					System.out.println("The entered number is a Prime number.");
+					break;
+				}
+			}
+		}
+	}
+}
+```
+
+Output:
+```
+Enter a number:
+31
+The entered number is a Prime number.
+```
+
+17.Fibonacci
+```
 
 ```
 
@@ -389,12 +543,189 @@ Output:
 
 ```
 
-
+18.Palindrome
 ```
 
 ```
 
 Output:
 ```
+
+```
+
+19.Reverse a string
+```
+package g;
+import java.util.*;
+import java.lang.*;
+public class New1
+{
+	public static void main(String[] args)
+	{
+		Scanner obj=new Scanner(System.in);
+		System.out.println("Enter any string:");
+		String str=obj.nextLine();
+		System.out.println("Reverse of the given string is:");
+		for(int i=(str.length()-1);i>=0;i--)
+		{
+			System.out.print(str.charAt(i));
+		}
+	}
+}
+```
+
+Output:
+```
+Enter any string:
+Github
+Reverse of the given string is:
+buhtiG
+```
+
+20.Count vowels
+```
+
+```
+
+Output:
+```
+
+```
+
+21.
+```
+
+```
+
+Output:
+```
+
+```
+
+22.
+```
+
+```
+
+Output:
+```
+
+```
+
+23.
+```
+
+```
+
+Output:
+```
+
+```
+
+24.
+```
+
+```
+
+Output:
+```
+
+```
+
+25.
+```
+
+```
+
+Output:
+```
+
+```
+
+## 2.Arrays & Loops
+
+26.
+```
+
+```
+
+Output:
+```
+
+```
+
+27.
+```
+
+```
+
+Output:
+```
+
+```
+
+28.
+```
+
+```
+
+Output:
+```
+
+```
+
+29.
+```
+
+```
+
+Output:
+```
+
+```
+
+30.Linear search
+```
+package g;
+import java.util.*;
+import java.lang.*;
+public class New1
+{
+	public static void main(String[] args)
+	{
+		int arr[]= {12,43,25,66,89};
+		int flag=0;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter key to find:");
+		int key=sc.nextInt();
+		for(int i=0;i<arr.length;i++)
+		{
+			if(arr[i]==key)
+			{
+				flag=1;
+				break;
+			}
+		}
+		if(flag==1)
+		{
+			System.out.println("Element found in the array");
+		}
+		else
+		{
+			System.out.println("Element not found in the array.");
+		}
+	}
+}
+```
+
+Output:
+```
+Enter key to find:
+66
+Element found in the array
+
+Enter key to find:
+33
+Element not found in the array.
 
 ```
