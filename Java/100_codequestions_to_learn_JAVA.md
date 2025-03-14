@@ -535,22 +535,92 @@ The entered number is a Prime number.
 
 17.Fibonacci
 ```
-
+package g;
+import java.util.*;
+import java.lang.*;
+public class New1
+{
+	int Calfib(int num)
+	{
+		if(num<=1)
+		{
+			return num;
+		}
+		int[] fib=new int[num+1];
+		fib[0]=0;
+		fib[1]=1;
+		for(int i=2;i<=num;i++)
+		{
+			fib[i]=fib[i-1]+fib[i-2];
+		}
+		return fib[num];
+	}
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter number:");
+		New1 obj=new New1();
+		int num=sc.nextInt();
+		if(num<1)
+		{
+			System.out.println("Enter valid number");
+		}
+		else
+		{
+			System.out.println("Fibonacci upto "+ num +"is:"+obj.Calfib(num));
+		}
+	}
+	
+}
 ```
 
 Output:
 ```
+Enter number:
+8
+Fibonacci upto 8is:21
 
+Enter number:
+11
+Fibonacci upto 11is:89
 ```
 
 18.Palindrome
 ```
-
+package g;
+import java.util.*;
+import java.lang.*;
+public class New1
+{
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter any String:");
+		String str=sc.nextLine();
+		StringBuilder sb=new StringBuilder(str);
+		sb.reverse();
+		String str2=sb.toString();
+		if(str.equals(str2))
+		{
+			System.out.println("The given String is a Palindrome.");
+		}
+		else
+		{
+			System.out.println("Not a Palindrome.");
+		}
+	}
+}
 ```
 
 Output:
 ```
+Enter any String:
+madam
+The given String is a Palindrome.
 
+Enter any String:
+satwika
+Not a Palindrome.
 ```
 
 19.Reverse a string
@@ -584,6 +654,72 @@ buhtiG
 
 20.Count vowels
 ```
+package g;
+import java.util.*;
+import java.lang.*;
+public class New1
+{
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter any String:");
+		String str=sc.nextLine();
+		System.out.println("The given string is:"+str);
+		int count=0;
+		for(int i=0;i<str.length();i++)
+		{
+			if(str.charAt(i)=='a'||str.charAt(i)=='e'||str.charAt(i)=='i'||str.charAt(i)=='o'||str.charAt(i)=='u')
+			{
+				count++;
+			}
+		}
+		System.out.println("Number of vowels in the given string:"+count);
+	}
+}
+```
+
+Output:
+```
+Enter any String:
+satwika
+The given string is:satwika
+Number of vowels in the given string:3
+```
+
+21.Sum of digits
+```
+package g;
+
+import java.util.*;
+
+public class New1
+{
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a number:");
+		int num=sc.nextInt();
+		int sum=0;
+		for(;num!=0;)
+		{
+			int r=num%10;
+			sum+=r;
+			num/=10;
+		}
+		System.out.println("Sum of digits is:"+sum);
+	}
+}
+```
+
+Output:
+```
+Enter a number:
+9999
+Sum of digits is:36
+```
+
+22.Armstrong
+```
 
 ```
 
@@ -592,47 +728,98 @@ Output:
 
 ```
 
-21.
+23.Multiplication table
 ```
+package g;
 
-```
+import java.util.*;
 
-Output:
-```
-
-```
-
-22.
-```
-
-```
-
-Output:
-```
-
-```
-
-23.
-```
-
+public class New1
+{
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a number:");
+		int num=sc.nextInt();
+		for(int i=1;i<=10;i++)
+		{
+			System.out.println(num+"x"+i+"="+(num*i));
+		}
+	}
+}
 ```
 
 Output:
 ```
-
+Enter a number:
+5
+5x1=5
+5x2=10
+5x3=15
+5x4=20
+5x5=25
+5x6=30
+5x7=35
+5x8=40
+5x9=45
+5x10=50
 ```
 
-24.
+24.Simple calc
 ```
+package g;
 
+import java.util.*;
+
+public class New1
+{
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter first number:");
+		int a=sc.nextInt();
+		System.out.println("Enter first number:");
+		int b=sc.nextInt();
+		Scanner obj=new Scanner(System.in);
+		System.out.println("Enter operation:");
+		String op=obj.nextLine();
+		switch(op)
+		{
+		case "m":
+			int m=a*b;
+			System.out.println(a+"x"+b+"="+m);
+			break;
+		case "s":
+			int s=a-b;
+			System.out.println(a+"+"+b+"="+s);
+			break;
+		case "a":
+			int add=a+b;
+			System.out.println(a+"-"+b+"="+add);
+			break;
+		case "d":
+			int d=a/b;
+			System.out.println(a+"/"+b+"="+d);
+			break;
+		default:
+			System.out.println("Enter valid symbol");
+		}
+	}
+}
 ```
 
 Output:
 ```
-
+Enter first number:
+8
+Enter first number:
+8
+Enter operation:
+s
+8+8=0
 ```
 
-25.
+25.number guessing
 ```
 
 ```
