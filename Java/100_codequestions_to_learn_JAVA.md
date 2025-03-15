@@ -829,46 +829,150 @@ Output:
 
 ```
 
-## 2.Arrays & Loops
+## 2.Arrays & Loops  
 
-26.
+26.Sum of elements in Array
 ```
+package g;
 
-```
+import java.util.*;
 
-Output:
-```
-
-```
-
-27.
-```
-
-```
-
-Output:
-```
-
-```
-
-28.
-```
-
-```
-
-Output:
-```
-
-```
-
-29.
-```
-
+public class New1
+{
+	public static void main(String[] args)
+	{
+		int arr[]= {1,6,2,8,3,9,4,6,5};
+		System.out.println("The array is:");
+		for(int i=0;i<arr.length;i++)
+		{
+			System.out.print(arr[i]+" ");
+		}
+		System.out.println();
+		int sum=0;
+		for(int i=0;i<arr.length;i++)
+		{
+			sum+=arr[i];
+		}
+		System.out.println("Sum of array elements:"+sum);
+	}
+}
 ```
 
 Output:
 ```
+The array is:
+1 6 2 8 3 9 4 6 5 
+Sum of array elements:44
+```
 
+27.Average of array elements
+```
+package g;
+
+import java.util.*;
+
+public class New1
+{
+	public static void main(String[] args)
+	{
+		int arr[]= {1,6,2,8,3,9,4,6,5};
+		System.out.println("The array is:");
+		for(int i=0;i<arr.length;i++)
+		{
+			System.out.print(arr[i]+" ");
+		}
+		System.out.println();
+		int sum=0;
+		for(int i=0;i<arr.length;i++)
+		{
+			sum+=arr[i];
+		}
+		int n=arr.length;
+		int avg=sum/n;
+		System.out.println("Average of array elements:"+avg);
+	}
+}
+```
+
+Output:
+```
+The array is:
+1 6 2 8 3 9 4 6 5 
+Average of array elements:4
+```
+
+28.Maximum element in array
+```
+package g;
+
+import java.util.*;
+
+public class New1
+{
+	public static void main(String[] args)
+	{
+		int arr[]= {1,6,2,8,3,9,4,6,5};
+		System.out.println("The array is:");
+		for(int i=0;i<arr.length;i++)
+		{
+			System.out.print(arr[i]+" ");
+		}
+		System.out.println();
+		int lar=arr[0];
+		for(int i=1;i<arr.length;i++)
+		{
+			if(arr[i]>lar)
+			{
+				lar=arr[i];
+			}
+		}
+		System.out.println("Maximum element in array:"+lar);
+	}
+}
+```
+
+Output:
+```
+The array is:
+1 6 2 8 3 9 4 6 5 
+Maximum element in array:9
+```
+
+29.Minimum element in array
+```
+package g;
+
+import java.util.*;
+
+public class New1
+{
+	public static void main(String[] args)
+	{
+		int arr[]= {1,6,2,8,3,9,4,6,5};
+		System.out.println("The array is:");
+		for(int i=0;i<arr.length;i++)
+		{
+			System.out.print(arr[i]+" ");
+		}
+		System.out.println();
+		int lar=arr[0];
+		for(int i=1;i<arr.length;i++)
+		{
+			if(arr[i]<lar)
+			{
+				lar=arr[i];
+			}
+		}
+		System.out.println("Maximum element in array:"+lar);
+	}
+}
+```
+
+Output:
+```
+The array is:
+1 6 2 8 3 9 4 6 5 
+Maximum element in array:1
 ```
 
 30.Linear search
@@ -914,5 +1018,95 @@ Element found in the array
 Enter key to find:
 33
 Element not found in the array.
+
+```
+
+32.Binary Search
+```
+
+```
+
+Output:
+```
+
+```
+
+33.
+```
+
+```
+
+Output:
+```
+
+```
+
+34.
+```
+
+```
+
+Output:
+```
+
+```
+
+35.
+```
+
+```
+
+Output:
+```
+
+```
+
+36.
+```
+
+```
+
+Output:
+```
+
+```
+
+37.
+```
+
+```
+
+Output:
+```
+
+```
+
+38.
+```
+
+```
+
+Output:
+```
+
+```
+
+39.
+```
+
+```
+
+Output:
+```
+
+```
+
+40.
+```
+
+```
+
+Output:
+```
 
 ```
